@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDropdown from 'react-dropdown';
+import 'react-dropdown/style.css'
 
 const Dropdown = ({ options, onChange, placeholder, value }) =>
   <ReactDropdown

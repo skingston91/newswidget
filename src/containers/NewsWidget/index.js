@@ -22,7 +22,8 @@ class NewsWidget extends Component {
   };
 
   componentDidMount() {
-    const rawData = newsDataRequest();
+    const rawData = newsDataRequest(); // doesn't work yet
+
     if (!rawData || rawData.error) this.setState({ loading: false, error: true });
     if (rawData && rawData.data) this.convertData(rawData.data)
   };
@@ -52,7 +53,7 @@ class NewsWidget extends Component {
       <div className='NewsWidget'>
         <h3> News </h3>
         {
-          this.state.sources && this.state.sources.length > 1 && 
+          this.state.sources && this.state.sources.length > 1 &&
             <Dropdown
               options={ this.state.sources }
               onSelect={ this.onChange }

@@ -3,6 +3,17 @@ Install Instructions
 - yarn
 - yarn install
 
+Improvements
+- Obviously Not finished
+- Styling needs to be added
+- Snapshots to be added at the end
+- Failing and extreme tests for util functionality
+- Api requests to be finished
+- Add in the see more functionality
+- Manually test the filter functionality
+- Sources to be an object array with label not an array
+- The filter by source option to be added
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
