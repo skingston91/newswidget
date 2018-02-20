@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const Button = ({ text, onClick }) =>
-  <div className="Button" onClick={ onClick }>
+  <div className="button" onClick={ onClick }>
     <p> { text } </p>
   </div>;
 
 Button.propTypes = {
-  text: PropTypes.text.isRequired,
+  text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

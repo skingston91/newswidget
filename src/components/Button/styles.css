@@ -1,0 +1,7 @@
+.button {
+  border: 3px Pink solid;
+  cursor: pointer;
+  color: Pink;
+  width: 200px;
+  text-align: center;
+}
