@@ -6,7 +6,7 @@ export const newsDataRequest = () => {
   const url = `https://newsapi.org/v2/top-headlines?apiKey=${ apiKey }`
   const req = new Request(url);
   fetch(req)
-    .then(function(response) {
+    .then((response) => {
         console.log(response.json());
     })
 }

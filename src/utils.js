@@ -17,3 +17,6 @@ export const extractRequiredData = (data) => {
       }
     })
 };
+
+export const filterOnlyRequestedSources = (data, requestedSource) =>
+  data.filter(article => article.source === requestedSource)

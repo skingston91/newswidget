@@ -1,4 +1,8 @@
-import { extractSources, extractRequiredData } from './utils.js';
+import {
+    extractSources,
+    extractRequiredData,
+    filterOnlyRequestedSources
+  } from './utils.js';
 
 describe('extractSources', () => {
   it('returns list of all sources from data', () => {
@@ -24,6 +28,32 @@ describe('extractRequiredData', () => {
         title: 'Sylvester Stallone brushes off death hoax',
         url: 'http://www.bbc.co.uk/news/world-us-canada-43130898',
         date: '2018-02-20T19:07:49Z',
+      }
+    ]
+    expect(result).toEqual(expectedResult);
+  })
+});
+
+describe('filterOnlyRequestedSources', () => {
+  it('returns specificly requested Sources', () => {
+    const exampleArticlesData = [{
+        source: 'BBC News',
+        title: 'Trump Jr\'s passage to India causes a stir',
+        url: 'http://www.bbc.co.uk/news/world-us-canada-43135207',
+        date: '2018-02-20T20:22:03Z',
+      },{
+        source: 'Sky News',
+        title: 'Sylvester Stallone brushes off death hoax',
+        url: 'http://www.bbc.co.uk/news/world-us-canada-43130898',
+        date: '2018-02-20T19:07:49Z',
+      }
+    ]
+    const result = filterOnlyRequestedSources(exampleArticlesData, 'BBC News');
+    const expectedResult = [{
+        source: 'BBC News',
+        title: 'Trump Jr\'s passage to India causes a stir',
+        url: 'http://www.bbc.co.uk/news/world-us-canada-43135207',
+        date: '2018-02-20T20:22:03Z',
       }
     ]
     expect(result).toEqual(expectedResult);

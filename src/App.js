@@ -4,9 +4,6 @@ import Button from './components/Button/index.js';
 import NewsItem from './components/NewsItem/index.js';
 
 // import NewsWidget from 'containers/NewsWidget/index';
-const options = [
-  'one', 'two', 'three'
-];
 
 class App extends Component {
   render() {
