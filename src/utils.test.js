@@ -1,3 +1,16 @@
+import { extractSources } from './utils.js';
+
+describe('extractSources', () => {
+  it('returns list of all sources from data', () => {
+    const result = extractSources(exampleApiData);
+    const expectedResult = [
+      'BBC News',
+      'Sky News',
+    ]
+    expect(result).toEqual(expectedResult);
+  })
+});
+
 const exampleApiData = {
 "status": "ok",
 "totalResults": 10,
@@ -16,10 +29,10 @@ const exampleApiData = {
     },
     {
      "source": {
-      "id": "bbc-news",
-      "name": "BBC News"
+      "id": "Sky News",
+      "name": "Sky News"
     },
-      "author": "BBC News",
+      "author": "Sky News",
       "title": "Sylvester Stallone brushes off death hoax",
       "description": "The actor maintains he is \"alive and well\" after a bogus online prank claimed he had died.",
       "url": "http://www.bbc.co.uk/news/world-us-canada-43130898",
