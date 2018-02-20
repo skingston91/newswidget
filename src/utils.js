@@ -5,3 +5,15 @@ export const extractSources = (data) => {
       return array.indexOf(article) === index;
     })
 };
+
+export const extractRequiredData = (data) => {
+  return data.articles
+    .map(article => {
+      return {
+        source: article.source && article.source.name,
+        title: article.title,
+        url: article.url,
+        date: article.publishedAt,
+      }
+    })
+};
